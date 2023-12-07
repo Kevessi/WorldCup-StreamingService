@@ -1,12 +1,24 @@
+//- extends layout
+
+//- block content
+//-   h2 Register
+//-   form(action="/auth/register" method="post")
+//-     label(for='email') Email:
+//-     input(type="email" name="email" required)
+//-     label(for='name') Name:
+//-     input(type="text" name="name" required)
+//-     label(for='password') Password:
+//-     input(type="password" name="password" required)
+//-     button(type="submit") Register
+
 extends layout
 
 block content
-  h2 Register
-  form(action="/auth/register" method="post")
-    label(for='email') Email:
-    input(type="email" name="email" required)
-    label(for='name') Name:
-    input(type="text" name="name" required)
-    label(for='password') Password:
-    input(type="password" name="password" required)
-    button(type="submit") Register
+  div.form-container
+    h2 Welcome, why not sign up?
+    form(action='/auth/register' method='post')
+      input(type='email', name='email', placeholder='youremail@email.com', required)
+      input(type='text', name='name', placeholder='Your Name', required)
+      input(type='password', name='password', placeholder='password', required)
+      button(type='submit') Register
+

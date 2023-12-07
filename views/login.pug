@@ -1,14 +1,23 @@
+//- extends layout
+
+//- block content
+//-   h2 Login
+//-     if error
+//-     p.error #{error}
+//-   form(action="/auth/login" method="post")
+//-     label(for='email') Email:
+//-     input(type="email" name="email" required)
+    
+//-     label(for='password') Password:
+//-     input(type="password" name="password" required)
+
+//-     button(type="submit") Login
 extends layout
 
 block content
-  h2 Login
-    if error
-    p.error #{error}
-  form(action="/auth/login" method="post")
-    label(for='email') Email:
-    input(type="email" name="email" required)
-    
-    label(for='password') Password:
-    input(type="password" name="password" required)
-
-    button(type="submit") Login
+  div.form-container
+    h2 Welcome Back, Sign in!
+    form(action='/auth/login' method='post')
+      input(type='email', name='email', placeholder='youremail@email.com', required)
+      input(type='password', name='password', placeholder='password', required)
+      button(type='submit') Login
