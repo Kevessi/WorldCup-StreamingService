@@ -11,9 +11,11 @@ block content
       each video in videos
         li
           h3= video.title
-          a(href=video.url) Watch Video
+          a(href=video.url, class='watch-video-link') Watch Video
   else
     p You have not uploaded any videos yet.
 
-  // Link to add a new video
-  a(href="/video/new_video") Add a New Video
+  // Link to add a new video with enhanced styling
+  a(href="/video/new_video", class='add-video-link') Add a New Video
+
+  

@@ -1,110 +1,5 @@
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Arial", sans-serif;
-  background-color: #f0f0f0;
-  color: #333;
-  line-height: 1.6;
-}
-
-header {
-  background-color: #007bff;
-  color: white;
-  text-align: center;
-  padding: 1em 0;
-}
-
-header h1 {
-  margin: 0;
-  animation: fadeIn 2s;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-  margin-right: 20px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-nav ul li a:hover {
-  color: #ffdd00;
-}
-
-main {
-  padding: 20px;
-}
-
-h2 {
-  color: #007bff;
-  font-size: 2em;
-  margin-bottom: 10px;
-  animation: slideIn 1s;
-}
-
-@keyframes slideIn {
-  from {
-    transform: translateY(-100px);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-
-p {
-  font-size: 1.1em;
-  margin-bottom: 20px;
-}
-
-footer {
-  text-align: center;
-  padding: 20px 0;
-  background-color: #333;
-  color: white;
-}
-
-footer p {
-  margin: 0;
-  animation: fadeIn 2s;
-}
-
-label {
-  padding-left: 5px;
-}
-
-.error {
-  color: red;
-  margin-bottom: 15px;
-} */
-/* General Page Styling */
-/* General Page Styling */
-/* General Page Styling */
-/* Import Google Font */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
-/* General Page Styling */
 body {
   background-color: #2d2d2d;
   font-family: "Roboto", sans-serif;
@@ -113,7 +8,6 @@ body {
   margin: 0;
 }
 
-/* Header Styling */
 header h1 {
   font-size: 2.5rem;
   text-align: center;
@@ -122,7 +16,6 @@ header h1 {
   font-weight: 700;
 }
 
-/* Form Container */
 .form-container {
   background-color: #550000;
   margin: 40px auto;
@@ -135,7 +28,6 @@ header h1 {
   border: 2px solid #a10000;
 }
 
-/* Form Inputs */
 input[type="email"],
 input[type="password"],
 input[type="text"] {
@@ -144,19 +36,17 @@ input[type="text"] {
   margin: 10px 0;
   display: inline-block;
   border: 1px solid #a10000;
-  border-radius: 5px; /* Rounded corners for text boxes */
+  border-radius: 5px;
   background: #1a1a1a;
   color: #ffffff;
 }
 
-/* Form Headings */
 h2 {
   color: #ff5555;
   font-size: 1.8rem;
   margin-bottom: 20px;
 }
 
-/* Submit Button */
 button[type="submit"] {
   background-color: #a10000;
   color: white;
@@ -168,14 +58,12 @@ button[type="submit"] {
   width: 90%;
 }
 
-/* Error Messages */
 .error {
   color: #d63333;
   margin-bottom: 15px;
   font-weight: bold;
 }
 
-/* Navigation Links */
 nav ul {
   list-style: none;
   text-align: center;
@@ -202,11 +90,28 @@ nav ul li a:hover {
   transform: scale(1.05);
 }
 
-/* Footer Styling */
 footer {
   text-align: center;
   padding: 20px;
   margin-top: 30px;
   color: #ffffff;
   font-size: 0.9rem;
+}
+
+.watch-video-link,
+.add-video-link {
+  color: red;
+  background-color: grey;
+  padding: 10px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.watch-video-link:hover,
+.add-video-link:hover {
+  background-color: #d1e0f5;
+  color: #002244;
 }

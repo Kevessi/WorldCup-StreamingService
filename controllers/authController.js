@@ -9,7 +9,6 @@ exports.registerUser = async (req, res) => {
   const users = readDataFromFile("users.json");
   const { email, password, name } = req.body;
 
-  // Check if the email already exists
   if (users.some((user) => user.email === email)) {
     return res.render("register", { error: "Email already in use." });
   }
@@ -35,7 +34,6 @@ exports.loginUser = async (req, res) => {
     req.session.userId = user.email;
     res.redirect("/video/dashboard");
   } else {
-    // User not found or password mismatch
     res.render("login", {
       error: "Account not found. Please register to login.",
     });
@@ -45,7 +43,6 @@ exports.loginUser = async (req, res) => {
 exports.logoutUser = (req, res) => {
   req.session.destroy((err) => {
     if (err) {
-      // Handle error
       console.error(err);
       res.send("Error logging out");
     } else {

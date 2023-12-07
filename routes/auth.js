@@ -12,12 +12,9 @@ router.post("/login", authController.loginUser);
 router.get("/logout", authController.logoutUser);
 
 module.exports = router;
-// In your routes file (e.g., auth.js or video.js)
-router.get("/some-route", (req, res) => {
-  // ... some logic ...
 
-  // Pass 'user' to the view
+router.get("/some-route", (req, res) => {
   res.render("someView", {
-    user: req.session.userId, // This could be a boolean or user object
+    user: req.session.userId,
   });
 });

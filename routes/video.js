@@ -9,12 +9,9 @@ router.post("/new", isAuthenticated, videoController.addNewVideo);
 router.get("/dashboard", isAuthenticated, videoController.videoDashboard);
 
 module.exports = router;
-// In your routes file (e.g., auth.js or video.js)
-router.get("/some-route", (req, res) => {
-  // ... some logic ...
 
-  // Pass 'user' to the view
+router.get("/some-route", (req, res) => {
   res.render("someView", {
-    user: req.session.userId, // This could be a boolean or user object
+    user: req.session.userId,
   });
 });
