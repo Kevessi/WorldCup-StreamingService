@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1 Add a New Video
+  if error
+    p.error #{error}
+  form(action='/video/new', method='post')
+    label(for='title') Video Title:
+    input(type='text', name='title', required)
+    
+    label(for='url') Video URL:
+    input(type='url', name='url', required)
+    
+    button(type='submit') Add Video

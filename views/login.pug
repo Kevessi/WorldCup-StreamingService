@@ -2,6 +2,8 @@ extends layout
 
 block content
   h2 Login
+    if error
+    p.error #{error}
   form(action="/auth/login" method="post")
     label(for='email') Email:
     input(type="email" name="email" required)

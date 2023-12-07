@@ -4,7 +4,6 @@ const authController = require("../controllers/authController");
 const isAuthenticated = require("../middleware/authMiddleware");
 
 router.get("/protected-route", isAuthenticated, (req, res) => {
-  // Protected route logic
 });
 
 router.get("/register", authController.registerForm);

@@ -1,9 +1,8 @@
-// controllers/authController.js
 const bcrypt = require("bcrypt");
 const { readDataFromFile, writeDataToFile } = require("../data/dataHandler");
 
 exports.registerForm = (req, res) => {
-  res.render("register"); // Renders the registration form PUG template
+  res.render("register");
 };
 
 exports.registerUser = async (req, res) => {
@@ -24,11 +23,8 @@ exports.registerUser = async (req, res) => {
 };
 
 exports.loginForm = (req, res) => {
-  res.render("login"); // Renders the login form PUG template
+  res.render("login");
 };
-
-// controllers/authController.js
-// ... other imports ...
 
 exports.loginUser = async (req, res) => {
   const users = readDataFromFile("users.json");
@@ -39,7 +35,10 @@ exports.loginUser = async (req, res) => {
     req.session.userId = user.email;
     res.redirect("/video/dashboard");
   } else {
-    res.render("login", { error: "Invalid email or password." });
+    // User not found or password mismatch
+    res.render("login", {
+      error: "Account not found. Please register to login.",
+    });
   }
 };
 
